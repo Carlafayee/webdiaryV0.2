@@ -1,3 +1,4 @@
+<?php require 'head.php';?>
 
 <?php 
 session_start();
@@ -28,7 +29,7 @@ if(isset($_POST['save'])) {
 }
 
 if(isset($_SESSION['users'])) {
-        header("Location:home.php");
+        header("Location:header.php");
 }
 ?>
 
@@ -46,6 +47,10 @@ if(isset($_SESSION['users'])) {
 
     <title>Login</title>
   </head>
+
+
+
+
 
 <body>
 <div class="wrapper mt-sm-5" style="background-color: #ff9aa2" >
@@ -66,13 +71,16 @@ if(isset($_SESSION['users'])) {
 
         <!-- Login Button -->
         <div class="py-3 pb-4 border-bottom pink"> 
- <input class="btn mr-3" name="save" type="submit" value="Login">Login</div>
+ <input class="btn mr-3" name="save" type="submit" value="Login"></div>
 </form>
         <!-- text and register link -->
         <div class="d-sm-flex align-items-center pt-3" id="deactivate">
             <div> <b style="color:  #343a40">Don't have an account? </b><a href="signup.php">Register Here</a></div>
         </div>
     </div>
-</div>
+</div><br><br><br><br><br>
+
+<?php require 'footer.php';?>
+
 </body>
 </html>

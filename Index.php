@@ -17,7 +17,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box
-
 }
 
 
@@ -26,7 +25,7 @@
 <body>
 	<!--===== HEADER =====-->
 	<header class="l-header">
-		<nav class="nav bd-grid">
+		<nav class="nav bd-grid py-5">
 			<div>
 				<a href="#" class="nav__logo">My Diary</a>
 			</div>
@@ -37,7 +36,9 @@
 					<li class="nav__item"><a href="#about" class="nav__link">About</a></li>
 
 					<li class="nav__item"><a href="#services" class="nav__link">Creators</a></li>
-					<li class="nav__item"><a href="login.php" class="nav__link">Login</a></li>
+                    <li class="nav__item"><a href="login.php" class="nav__link">Login</a></li>
+					<li class="nav__item"><a href="signup.php" class="nav__link">Sign Up</a></li>
+
 				</ul>
 			</div>
 

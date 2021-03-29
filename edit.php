@@ -1,4 +1,4 @@
-<!doctype html>
+<?php require('header.php'); ?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -107,15 +107,16 @@ input[placeholder] {
     ?>
     
     <div class="container">
-        <h4 class="modal-title">Edit Entry</h4>
         <?php 
             if (isset($_POST['add'])) {
                 $insert = "UPDATE diary SET
+
                             Title=:Title,
                             StoryDiary=:StoryDiary
                             WHERE DiaryID=:id";
 
                 $preparedInsert = $con->prepare($insert);
+
 
                 $preparedInsert->bindParam(':Title', $_POST['Title']);
                 $preparedInsert->bindParam(':StoryDiary', $_POST['StoryDiary']);
@@ -134,12 +135,6 @@ input[placeholder] {
     <form class="form" method="POST" action="">
     <div class="py-2">
     <div class="form-group">
-
-        <div class="row py-2">
-            <div class="col-md-6"><label for="date" >Date:</label> <input class="bg-light form-control" type="date" value="" id="date"></div>
-            <div class="col-md-6"><label for="time" >Time:</label> <input class="bg-light form-control" type="time" value="" id="time"></div>
-        </div>
-
          <div class="row py-2">
             <div class="col-md-6 pt-md-0 pt-3"> <label for="text">Title: </label> <input name="Title" type="text" class="bg-light form-control" placeholder="Enter a title" 
 
@@ -147,22 +142,15 @@ input[placeholder] {
         </div>
 
         <div class="row py-2">
-            <textarea name="StoryDiary" 
-            placeholder="Write something about your day." 
-            class="bg-light form-control" 
-            id="entry" 
-            rows="10" required > 
-            <?= $product['StoryDiary'] ?>
-            </textarea>
+            <textarea name="StoryDiary"class="bg-light form-control" id="entry" rows="10" required ><?= trim($product['StoryDiary']);?></textarea>
         </div>
 
         
         <div class="py-3 pb-4 border-bottom">
 
              <a href="entries.php">
-              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button></a>
-              <button type="submit" class="btn mr-3" name="add">Save</button>
-              <button type="reset" class="btn">reset</button> </div>
+              <button type="button" class="btn button border" data-dismiss="modal">Cancel</button></a>
+              <button type="submit" class="btn mr-3 button border" name="add">Save</button>
     </div>
     </form> 
     </div>

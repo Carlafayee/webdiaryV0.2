@@ -1,13 +1,6 @@
-<!doctype html>
+<?php require'header.php' ?>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <title>Entry Form</title>
   </head>
 <style>
@@ -61,12 +54,12 @@ input[placeholder] {
 }
 
 
-.btn:hover {
+.button:hover {
     background-color: #343a40;
     color: #ff9aa2;
 }
 
-.btn {
+.button {
     background-color: #ff9aa2;
 }
 
@@ -80,13 +73,10 @@ input[placeholder] {
         line-height: 18px
     }
 }
-
-
 </style>
 <body>
 
     <?php 
-       #require('header.php');
        include('connect.php');
        echo "<br>";
        echo "<br>";
@@ -119,8 +109,8 @@ input[placeholder] {
             <textarea name="StoryDiary" placeholder="Write something about your day." class="bg-light form-control" id="entry" rows="10"></textarea>
         </div>
 
-        <div class="py-3 pb-4 border-bottom"> <button type="submit" class="btn mr-3" name="add">Save</button>
-            <button type="reset" class="btn">reset</button> </div>
+        <div class="py-3 pb-4 border-bottom"> <button type="submit" class="btn button border mr-3" name="add">Save</button>
+            <button type="reset" class="btn button border">reset</button> </div>
     </div>
     </form>
 </div>
@@ -142,5 +132,5 @@ input[placeholder] {
                         }
                     }
                 ?>
-</body>
+        </body>
 </html>

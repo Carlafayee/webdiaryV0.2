@@ -1,3 +1,7 @@
+<?php require 'head.php';?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,4 +40,6 @@
     </div>
 </div>
 </body>
-</html>
+</html><br><br><br><br><br>
+
+<?php require 'footer.php';?>

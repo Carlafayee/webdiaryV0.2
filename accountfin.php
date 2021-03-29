@@ -1,17 +1,11 @@
-<!doctype html>
+<?php require'header.php' ?>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <title>Account Settings</title>
   </head>
-<style>
 
+<style>
+    
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
@@ -63,8 +57,8 @@ label {
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 500;
- 	color: #ff9aa2;"    
- 	padding-left: 3px
+    color: #ff9aa2;"    
+    padding-left: 3px
 }
 
 .form-control {
@@ -111,7 +105,12 @@ input[placeholder] {
 }
 
 
+
+
+
 </style>
+
+
 <body>
 
 
@@ -130,7 +129,8 @@ input[placeholder] {
 
        $product = $statement->fetch();
 
-       ?>
+?>
+
 <div class="wrapper bg-dark mt-sm-5" >
     <h4 class="pb-4 border-bottom"  style="color: #ff9aa2;">Account settings</h4>
     <div class="d-flex align-items-start py-3 border-bottom"> <img src="https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img" alt="">
@@ -153,7 +153,7 @@ input[placeholder] {
         </div>
        
 
-        <div class="py-3 pb-4 border-bottom"> <button class="btn mr-3">Save Changes</button> <button class="btn border button">Cancel</button> </div>
+        <div class="py-3 pb-4 border-bottom"> <button class="btn button border mr-3">Save Changes</button> <button class="btn border button">Cancel</button> </div>
         <div class="d-sm-flex align-items-center pt-3" id="deactivate">
             <div> <b style="color: #ff9aa2;">Delete your account</b>
                 <p>Details about account and password</p>
@@ -162,5 +162,6 @@ input[placeholder] {
         </div>
     </div>
 </div>
+
 </body>
 </html>
